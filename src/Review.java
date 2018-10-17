@@ -25,6 +25,8 @@ public class Review {
 						n = 1;	
 					break;
 				case 2:
+					System.out.println("Enter a number");
+					
 					System.out.println("Do you want to choose another number?");
 					int anothernum2 = sc.nextInt();
 					if (anothernum2 < 1);
@@ -47,13 +49,19 @@ public class Review {
 						n = 1;
 						
 					break;
-				case 4:
+				case 4:					
 					System.out.println("Do you want to choose another number?");
 					int anothernum4 = sc.nextInt();
 					if (anothernum4 < 1);
 						n = 1;
 					break;
 				case 5:
+					String sentence;
+					System.out.println("Enter a sentence");
+					sentence = sc.nextLine();
+					String letter;
+					System.out.println("Enter a letter");
+					letter = sc.nextLine();
 					System.out.println("Do you want to choose another number?");
 					int anothernum5 = sc.nextInt();
 					if (anothernum5 < 1);
@@ -66,6 +74,24 @@ public class Review {
 						n = 1;
 					break;
 				case 7:
+					System.out.println("Enter a word to know if it is palindrome or not");
+					String word = sc.next();
+					int inc = 0;
+					int des = word.length()-1;
+					boolean error = false;
+					while ((inc<des) && (!error)){
+						 
+						if (word.charAt(inc)==word.charAt(des)){				
+							inc++;
+							des--;
+						} else {
+							error = true;
+						}
+					}
+					if (!error)
+						System.out.println(word + " is palindrome");
+					else
+						System.out.println(word + " is not palindrome");
 					System.out.println("Do you want to choose another number?");
 					int anothernum7 = sc.nextInt();
 					if (anothernum7 < 1);
@@ -74,10 +100,11 @@ public class Review {
 				default:
 					System.out.println("Enter a valid number");
 					break;
+			}
 		}
 			
 		}
 		}
-	}
+	
 
 
