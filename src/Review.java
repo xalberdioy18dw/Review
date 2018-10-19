@@ -26,7 +26,13 @@ public class Review {
 					break;
 				case 2:
 					System.out.println("Enter a number");
-					
+					int num2 = sc.nextInt();
+					System.out.println("Enter another number");
+					int a = sc.nextInt();
+					int count2 = 0;
+
+						count2++;
+
 					System.out.println("Do you want to choose another number?");
 					int anothernum2 = sc.nextInt();
 					if (anothernum2 < 1);
@@ -56,12 +62,19 @@ public class Review {
 						n = 1;
 					break;
 				case 5:
+					String letter;
+					System.out.println("Enter a letter");
+					letter = sc.next();
+					
 					String sentence;
 					System.out.println("Enter a sentence");
 					sentence = sc.nextLine();
-					String letter;
-					System.out.println("Enter a letter");
-					letter = sc.nextLine();
+
+					int count = 0;
+					if (sentence.startsWith(letter)) {
+						count++;
+					}
+					System.out.println(count);
 					System.out.println("Do you want to choose another number?");
 					int anothernum5 = sc.nextInt();
 					if (anothernum5 < 1);
