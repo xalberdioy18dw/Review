@@ -30,7 +30,7 @@ public class Review {
 					System.out.println("Enter another number");
 					int a = sc.nextInt();
 					int count2 = 0;
-
+					
 						count2++;
 
 					System.out.println("Do you want to choose another number?");
@@ -62,14 +62,12 @@ public class Review {
 						n = 1;
 					break;
 				case 5:
+					String sentence;
+					System.out.println("Enter a sentence");
+					sentence = sc.next();
 					String letter;
 					System.out.println("Enter a letter");
 					letter = sc.next();
-					
-					String sentence;
-					System.out.println("Enter a sentence");
-					sentence = sc.nextLine();
-
 					int count = 0;
 					if (sentence.startsWith(letter)) {
 						count++;
