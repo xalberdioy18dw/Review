@@ -19,7 +19,7 @@ public class Review {
 						if (r % 2 == 0) {
 							even ++;
 						}
-						}
+					}
 						System.out.println("There are " + even + " even numbers in this number");
 					System.out.println("Do you want to choose another number?");
 					int anothernum = sc.nextInt();
@@ -27,10 +27,14 @@ public class Review {
 						n = 1;	
 					break;
 				case 2:
-					System.out.println("Enter a number");
+					// It asks to enter a positive number
+					System.out.println("Enter a positive number");
+					// You have to enter a positive number.
 					int num2 = sc.nextInt();
-					System.out.println("Enter another number");
-					int a = sc.nextInt();
+					// It asks you to enter a digit.
+					System.out.println("Enter a digit");
+					// You have to enter a digit to know if this digit is in the previous number.
+					int k = sc.nextInt();
 					int count2 = 0;
 					
 						count2++;
