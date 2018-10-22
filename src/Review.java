@@ -12,7 +12,9 @@ public class Review {
 					System.out.println("Enter a number");
 					y = Integer.parseInt(sc.next());
 					while (y != 0) {
-						r = y & 10;
+						r = y % 10;
+						System.out.println("r value " + r);
+						System.out.println("y value " + y);
 						y = y / 10;
 						if (r % 2 == 0) {
 							even ++;
