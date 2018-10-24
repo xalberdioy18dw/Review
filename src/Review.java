@@ -6,6 +6,8 @@ public class Review {
 		while(n != 1) {
 			System.out.println("Enter a number from 1 to 7");
 			int z = sc.nextInt();
+			sc.nextLine();
+			
 			switch(z) {
 				case 1:
 					int y, r, even = 0;
@@ -33,7 +35,7 @@ public class Review {
 					int num2 = sc.nextInt();
 					// It asks you to enter a digit.
 					System.out.println("Enter a digit");
-					// You have to enter a digit to know if this digit is in the previous number.
+					// You have to enter +a digit to know if this digit is in the previous number.
 					int k = sc.nextInt();
 					int count2 = 0;
 					
@@ -70,21 +72,39 @@ public class Review {
 				case 5:
 					String sentence;
 					System.out.println("Enter a sentence");
-					sentence = sc.next();
+					sentence = sc.nextLine();
 					String letter;
 					System.out.println("Enter a letter");
 					letter = sc.next();
 					int count = 0;
-					if (sentence.startsWith(letter)) {
-						count++;
+					String[] words = sentence.split(" ");
+					for (int i = 0; i < words.length; i++) {
+						if (words[i].startsWith(letter)) {
+							count++;
+						}
 					}
-					System.out.println(count);
+					System.out.println("There is/are " + count + " words that are started with that letter.");
 					System.out.println("Do you want to choose another number?");
 					int anothernum5 = sc.nextInt();
 					if (anothernum5 < 1);
 						n = 1;
 					break;
 				case 6:
+					String sentence6;
+					System.out.println("Enter a sentence");
+					sentence6 = sc.nextLine();
+					String letter6;
+					System.out.println("Enter a letter");
+					letter6 = sc.next();
+					int count6 = 0;
+					String [] words6 = sentence6.split(" ");
+					for (int i2 = 0; i2 < words6.length; i2++) {
+						if (words6[i2].endsWith(letter6)) {
+							count6++;
+						}
+					}
+					System.out.println("There is/are " + count6 +  " words that are ended with that letter");
+					
 					System.out.println("Do you want to choose another number?");
 					int anothernum6 = sc.nextInt();
 					if (anothernum6 < 1);
